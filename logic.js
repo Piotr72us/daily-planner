@@ -40,7 +40,7 @@ function checkHours() {
 
     function readFromLocalStorage () {
 // <!-- this is to look for anything saved previously in local storage -->
-var lastUser = JSON.parse(localStorage.getItem("userInput"));
+var lastUser = JSON.parse(localStorage.getItem("userInput")) || [];
 
 // assign as text back in element (using its id (specific to each hour)
 text9.textContent = lastUser.text9;
@@ -95,8 +95,9 @@ $(".saveBtn").click(function() {
 })
 
 // call readFromLocalStorage(); 
-readFromLocalStorage(); 
+// readFromLocalStorage(); 
 
 $(document).ready(function() {
     checkHours();
+    readFromLocalStorage(); 
 });
