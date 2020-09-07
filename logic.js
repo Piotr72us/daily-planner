@@ -18,6 +18,7 @@ var text15 = document.querySelector("#text15");
 var text16 = document.querySelector("#text16");
 var text17 = document.querySelector("#text17");
 
+
 function checkHours() {
     for (var i = 0; i < hourElements.length; i++) {
     //- read value from time property
@@ -95,3 +96,7 @@ $(".saveBtn").click(function() {
 
 // call readFromLocalStorage(); 
 readFromLocalStorage(); 
+
+window.onload = function() {
+    checkHours();
+};
