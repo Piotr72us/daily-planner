@@ -2,6 +2,8 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
+  background-image: url("./img/paper.jpg");
+  background-size: 100% 100%;
 }
 
 textarea{
@@ -16,9 +18,11 @@ textarea{
 .jumbotron {
   text-align: center;
   background-color: transparent;
-  color: black;
+  color: cornsilk;
   border-radius: 0;
   border-bottom: 10px solid black;
+  background-image: url("./img/nbook.jpg");
+  background-size: 100% 100%;
 }
 
 .description{
@@ -68,18 +72,11 @@ textarea{
 }
 
 .saveBtn i:hover {
-  font-size: 20px;
+  font-size: 30px;
   transition: all .3s ease-in-out;
 }
 
-/* .bi::before {
-  display: inline-block;
-  content: "";
-  background-image: url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='%23333' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z' clip-rule='evenodd'/></svg>");
-  background-repeat: no-repeat;
-  background-size: 1rem 1rem;
-} */
-
+/* CSS styling property to display each "save" icon in the middle of the button container */
 .icon {
   position: absolute;
   top: 50%;
@@ -88,4 +85,3 @@ textarea{
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
 }
-
