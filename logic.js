@@ -19,20 +19,20 @@ var text16 = document.querySelector("#text16");
 var text17 = document.querySelector("#text17");
 
 
-function checkHours() {
-    for (var i = 0; i < hourElements.length; i++) {
-    //- read value from time property
-    //- check current hour vs time slot (to determine color of text area: gray, red or green)
-        if (parseInt(currentHour) < parseInt(hourElements[i].match(/(\d+)/))) {
-        //- assign proper class (.past .present .future) based on comparison to current hour (<, > or =)
-            $("#" + hourElements[i]).addClass("future");
-        } else if (parseInt(currentHour) > parseInt(hourElements[i].match(/(\d+)/))) {
-            $("#" + hourElements[i]).addClass("past");
-        } else {
-            $("#" + hourElements[i]).addClass("present");
-        }
-    }
-}
+// function checkHours() {
+//     for (var i = 0; i < hourElements.length; i++) {
+//     //- read value from time property
+//     //- check current hour vs time slot (to determine color of text area: gray, red or green)
+//         if (parseInt(currentHour) < parseInt(hourElements[i].match(/(\d+)/))) {
+//         //- assign proper class (.past .present .future) based on comparison to current hour (<, > or =)
+//             $("#" + hourElements[i]).addClass("future");
+//         } else if (parseInt(currentHour) > parseInt(hourElements[i].match(/(\d+)/))) {
+//             $("#" + hourElements[i]).addClass("past");
+//         } else {
+//             $("#" + hourElements[i]).addClass("present");
+//         }
+//     }
+// }
 
 
 // array containing IDs of all timeblocks
