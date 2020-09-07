@@ -97,6 +97,6 @@ $(".saveBtn").click(function() {
 // call readFromLocalStorage(); 
 readFromLocalStorage(); 
 
-window.onload = function() {
+$(document).ready(function() {
     checkHours();
-};
+});
