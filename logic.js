@@ -5,6 +5,7 @@ var date = moment().format('llll');
 document.getElementById("currentDay").append(date);
 //current hour (24h time) as numeric value
 var currentHour = moment().format('H');
+var hourElements = ["hour-9", "hour-10", "hour-11", "hour-12", "hour-13", "hour-14", "hour-15", "hour-16", "hour-17"];
 
 // variables for text input area of each timeblock
 var text9 = document.querySelector("#text9");
@@ -17,8 +18,24 @@ var text15 = document.querySelector("#text15");
 var text16 = document.querySelector("#text16");
 var text17 = document.querySelector("#text17");
 
+function checkHours() {
+    for (var i = 0; i < hourElements.length; i++) {
+    //- read value from time property
+    //- check current hour vs time slot (to determine color of text area: gray, red or green)
+        if (parseInt(currentHour) < parseInt(hourElements[i].match(/(\d+)/))) {
+        //- assign proper class (.past .present .future) based on comparison to current hour (<, > or =)
+            $("#" + hourElements[i]).addClass("future");
+        } else if (parseInt(currentHour) > parseInt(hourElements[i].match(/(\d+)/))) {
+            $("#" + hourElements[i]).addClass("past");
+        } else {
+            $("#" + hourElements[i]).addClass("present");
+        }
+    }
+}
+
+
 // array containing IDs of all timeblocks
-var hourElements = ["hour-9", "hour-10", "hour-11", "hour-12", "hour-13", "hour-14", "hour-15", "hour-16", "hour-17"];
+// var hourElements = ["hour-9", "hour-10", "hour-11", "hour-12", "hour-13", "hour-14", "hour-15", "hour-16", "hour-17"];
 
     function readFromLocalStorage () {
 // <!-- this is to look for anything saved previously in local storage -->
@@ -36,18 +53,19 @@ text16.textContent = lastUser.text16;
 text17.textContent = lastUser.text17;
 
 // for loop
-for (var i = 0; i < hourElements.length; i++) {
-//- read value from time property
-//- check current hour vs time slot (to determine color of text area: gray, red or green)
-if (parseInt(currentHour) < parseInt(hourElements[i].match(/(\d+)/))) {
-    //- assign proper class (.past .present .future) based on comparison to current hour (<, > or =)
-    $("#" + hourElements[i]).addClass("future");
-} else if (parseInt(currentHour) > parseInt(hourElements[i].match(/(\d+)/))) {
-    $("#" + hourElements[i]).addClass("past");
-} else {
-    $("#" + hourElements[i]).addClass("present");
-}
-    }
+// for (var i = 0; i < hourElements.length; i++) {
+// //- read value from time property
+// //- check current hour vs time slot (to determine color of text area: gray, red or green)
+
+// if (parseInt(currentHour) < parseInt(hourElements[i].match(/(\d+)/))) {
+//     //- assign proper class (.past .present .future) based on comparison to current hour (<, > or =)
+//     $("#" + hourElements[i]).addClass("future");
+// } else if (parseInt(currentHour) > parseInt(hourElements[i].match(/(\d+)/))) {
+//     $("#" + hourElements[i]).addClass("past");
+// } else {
+//     $("#" + hourElements[i]).addClass("present");
+// }
+//     }
 }
 
     function writeToLocalStorage () {
