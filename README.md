@@ -6,10 +6,10 @@ Wherever you are heading to this year, you may enjoy this simple & handy _**work
 
 ### Programming Languages Used:
 ---
-* `JavaScript`: 25%
-  * including `$jQuery` and `moments.js`
-* `CSS`: 20%
-* `HTML`: 55%
+* `JavaScript`: 35%
+  * including $jQuery and moments.js
+* `CSS`: 16%
+* `HTML`: 49%
 
 ### About this application:
 ---
