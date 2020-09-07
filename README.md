@@ -23,4 +23,4 @@ Rest assured knowing that you will not miss an important event any more!
 ### Quick glance at the Daily Planner 2020:
 ---
 
-![screenshot](./img/screen.png)
+![screenshot](./img/screen2.png)
