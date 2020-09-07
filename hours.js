@@ -7,11 +7,13 @@ function checkHours() {
     //- check current hour vs time slot (to determine color of text area: gray, red or green)
         if (parseInt(currentHour) < parseInt(hourElements[i].match(/(\d+)/))) {
         //- assign proper class (.past .present .future) based on comparison to current hour (<, > or =)
-            $("#" + hourElements[i]).addClass("future");
+            $("#" + hourElements[i]).removeClass("present").addClass("future");
         } else if (parseInt(currentHour) > parseInt(hourElements[i].match(/(\d+)/))) {
-            $("#" + hourElements[i]).addClass("past");
+            $("#" + hourElements[i]).removeClass("present").addClass("past");
         } else {
-            $("#" + hourElements[i]).addClass("present");
+            $("#" + hourElements[i]).removeClass("present").addClass("present");
         }
     }
 }
+
+checkHours();

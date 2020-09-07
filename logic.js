@@ -98,6 +98,6 @@ $(".saveBtn").click(function() {
 // readFromLocalStorage(); 
 
 $(document).ready(function() {
-    checkHours();
+    // checkHours();
     readFromLocalStorage(); 
 });
