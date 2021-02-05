@@ -2,7 +2,7 @@
 
 Wherever you are heading to this year, you may enjoy this simple & handy _**work day scheduler**_...
 
-### GitHub Page with [Live Version!](https://piotr72us.github.io/dailyPlanner2020/index.html)
+### GitHub Page with [Live Version!](https://piotr72us.github.io/daily-planner-2020/index.html)
 
 ### Programming Languages Used:
 ---
